@@ -28,37 +28,37 @@ public class Calculator {
 	public void add (int value) //add function
 	{
 		total = total + value;
-		history = history + "+" + value; 
+		history = history + " + " + value; 
 	}
 	
 	public void subtract (int value) //subtract function
 	{
 		total = total - value;
-		history = history + "-" + value;
+		history = history + " - " + value;
 	}
 	
 	public void multiply (int value) //multiply function
 	{
 		total = total * value;
-		history = history + "*" + value;
+		history = history + " * " + value;
 	}
 	
 	public void divide (int value) //divide function
 	{
-		if(value == 0)
+		if(value == 0)   //making sure divide by 0 error doesnt occur
 		{
 			total = 0;
 		}
 		else
 		{
 		total = total / value;
-		history = history + "/" + value;
+		history = history + " / " + value;
 		}
 	}
 	
 	public String getHistory () //function to get history of actions
 	{
-		return history;
+		return history;  //return string of history
 	}
 
 }
