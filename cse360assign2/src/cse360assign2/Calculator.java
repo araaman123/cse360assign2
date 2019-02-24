@@ -13,6 +13,7 @@ package cse360assign2;
 public class Calculator {
 
 	private int total;
+	private String history="0";
 	
 	public Calculator () 
 	{
@@ -26,31 +27,38 @@ public class Calculator {
 	
 	public void add (int value) //add function
 	{
-		total=total+value;
+		total = total + value;
+		history = history + "+" + value; 
 	}
 	
 	public void subtract (int value) //subtract function
 	{
-		total=total-value;
+		total = total - value;
+		history = history + "-" + value;
 	}
 	
 	public void multiply (int value) //multiply function
 	{
-		total=total*value;
+		total = total * value;
+		history = history + "*" + value;
 	}
 	
 	public void divide (int value) //divide function
 	{
-		if(value==0)
+		if(value == 0)
 		{
-			total=0;
+			total = 0;
 		}
-		total=total/value;
+		else
+		{
+		total = total / value;
+		history = history + "/" + value;
+		}
 	}
 	
 	public String getHistory () //function to get history of actions
 	{
-		return "";
+		return history;
 	}
 
 }
